@@ -1,6 +1,7 @@
 "use strict";
 
 // Basic express setup:
+//#region 
 
 const PORT          = 8080;
 const express       = require("express");
@@ -9,6 +10,8 @@ const app           = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
+//#endregion 
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
