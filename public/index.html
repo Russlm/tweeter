@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -33,51 +34,49 @@
       <span id = "Tweeter">Tweeter</span>
       <div>
         <span>Write a tweet</span>
+        <div>
+          <i class="fas fa-angle-double-down"></i>
+        </div>
       </div>
+      
     </nav>
-
-    <header>
+    <header id="mainhead">
       <div style = "border: 2px solid green">
           <img src="/images/profile-hex.png"> 
           <p>lOrem Ipsos</p>
+          
       </div>
       <br>
       <div>
           <h2>Your Name</h2>
       </div>
   </header>
-
-    <p>1. Nationalism and substructural deappropriation
-      In the works of Burroughs, a predominant concept is the distinction between
-      masculine and feminine. Therefore, the subject is interpolated into a
-      substructural deappropriation that includes narrativity as a reality.
-      
-      “Society is fundamentally impossible,” says Sontag; however, according to
-      Hubbard[1] , it is not so much society that is fundamentally
-      impossible, but rather the failure of society. A number of desublimations
-      concerning not theory per se, but posttheory may be found. However, Sartre
-      promotes the use of nationalism to modify class.
-      
-      “Sexual identity is elitist,” says Lacan. Foucault uses the term
-      ‘postpatriarchialist textual theory’ to denote the bridge between consciousness
-      and class. It could be said that Sontag suggests the use of nationalism to
-      attack outmoded, colonialist perceptions of society.
-      
-      The characteristic theme of la Tournier’s[2] critique of
-      neodeconstructive appropriation is the role of the observer as reader. The main
-      theme of the works of Madonna is not discourse, but prediscourse. Therefore,
-      the premise of nationalism states that class, surprisingly, has significance.</p>
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div id = "counterAndButton">
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" id ="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      <article class= 'tweets'> 
+        <header>
+          <div><p>"Username"</p></div>
+          <div><p>"@Username"</p></div>
+          
+        </header>
+        <p>"Text of Tweet "</p>
+        <footer>
+          <div><p>"Time"</p></div>
+          <div>
+            <i class="fas fa-flag"></i>
+            <i class="fal fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+        </footer>
+      </article>
     </main>
   </body>
 
