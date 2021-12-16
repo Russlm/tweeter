@@ -1,0 +1,15 @@
+.new-tweet {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+#tweet-text{
+  width: 100%;
+
+}
+#counterAndButton {
+  display: flex;
+  font-family: 'Bungee', 'sans-sherif';
+  /* flex-direction: row-reverse; */
+  justify-content: space-between;
+}
