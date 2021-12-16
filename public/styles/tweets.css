@@ -9,7 +9,7 @@
 
 .tweets{
   width: 100%;
-  background-color: aqua;
+
   border-radius: 5px;
   border-color: black;
   border-style: solid;
@@ -23,15 +23,25 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: aqua;
+
   border-color: solid black;
 
 }
 .tweets > footer {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  background-color: aqua;
-}
+  align-content: center;
+  margin-left: 1%;
+  margin-right: 1%;
 
-/* i:hover{ */
+  border-top: 5px solid black ;
+
+
+}
+.tweets > footer > div> i{
+  color: #4056A1;
+  size: 60%;
+}
+.tweets > footer > div> i:hover{
+  filter: invert(100%);
+}
