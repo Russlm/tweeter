@@ -43,7 +43,7 @@
 }
 .tweets > footer > div> i{
   color: #4056A1;
-  height: 25%;
+  height: 50%;
   margin: .5em .25em .5em .1em;
   object-fit: contain;
 }
@@ -61,4 +61,8 @@
 }
 .profilePic{
   object-fit: contain;
+}
+.tweetBody{ 
+  font-weight: bold;
+  margin-left: 5%;
 }
