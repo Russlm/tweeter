@@ -19,10 +19,6 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
-  
-
-
-
 const createTweetElement = (tweet) => {
   const tweetElement = `
   <article class= 'tweets'> 
@@ -37,7 +33,7 @@ const createTweetElement = (tweet) => {
         <p class= "tweetBody">${escape(tweet.content.text)}</p>
         <footer>
           <div>
-            <p>${(tweet.created_at.name)}</p></div>
+            <p>${timeago.format(tweet.created_at.name)}</p></div>
           <div>
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -48,16 +44,6 @@ const createTweetElement = (tweet) => {
       `
   return tweetElement;
 }
-
-
-
-  // $("username") = tweet.user.name 
-  // $("profilePic") = tweet.user.avatars 
-  // $("handle") = tweet.user.handle 
-  // $("#tweet-text") = tweet.content.text 
-  // $("timestamp") = tweet.content.text 
-  // $("timestamp") = tweet["created_at"];
-
 
 const $tweet = createTweetElement(tweetData);
 
