@@ -11,7 +11,7 @@ const tweetData = {
   "user": {
     "name": "Bob",
     "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+      "handle": "@SirIsaac2"
     },
   "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
@@ -76,19 +76,16 @@ const data = [
   }
 ]
 
-// const renderTweets = function(tweets) {
-//   // loops through tweets
-//   for(tweet in tweets) {
-//     console.log("tweet in question", tweets[tweet]);
-//     createTweetElement(tweets[tweet]);
-//     console.log(createTweetElement(tweets[tweet]))
-//     $('.tweets-container').append(tweets[tweet]); 
+const renderTweets = function(tweets) {
+  // loops through tweets
+  for(tweet of tweets) {
+    $('.tweets-container').append(createTweetElement(tweet)); 
 
-//   }
-//   // calls createTweetElement for each tweet
-//   // takes return value and appends it to the tweets container
-// }
+  }
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
+}
 
-// renderTweets(data);
+renderTweets(data);
 
 });
