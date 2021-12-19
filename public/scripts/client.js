@@ -88,4 +88,9 @@ const renderTweets = function(tweets) {
 
 renderTweets(data);
 
+$("tweet-submit").submit(function(event) {
+  event.preventDefault()
+})
+
+
 });
