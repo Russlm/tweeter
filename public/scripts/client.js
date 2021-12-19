@@ -88,9 +88,12 @@ const renderTweets = function(tweets) {
 
 renderTweets(data);
 
-$("tweet-submit").submit(function(event) {
-  event.preventDefault()
+$("#tweet-submit").submit(function(event) {
+  event.preventDefault();
   console.log($(this).serialize());
+  $(this).serialize()
+  alert( "Handler for .submit() called." );
+  $.post("/tweets")
 })
 
 
