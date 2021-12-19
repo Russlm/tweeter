@@ -48,7 +48,7 @@ const createTweetElement = (tweet) => {
 // Test / driver code (temporary)
 const $tweet = createTweetElement(tweetData);
 console.log($tweet); // to see what it looks like
-$('.tweets-container').append($tweet); 
+// $('.tweets-container').append($tweet); 
 
 // Render Tweets Driver Code  
 const data = [
