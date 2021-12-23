@@ -86,7 +86,7 @@ const renderTweets = function(tweets) {
   // takes return value and appends it to the tweets container
 }
 
-renderTweets(data);
+// renderTweets(data);
 
 $("#tweet-submit").submit(function(event) {
   event.preventDefault();
@@ -95,6 +95,16 @@ $("#tweet-submit").submit(function(event) {
   alert( "Handler for .submit() called." );
   $.post("/tweets")
 })
+
+const loadTweets = () => {
+  $.getJSON('/tweets')
+  .then(result => {
+    console.log('tweet request successful')
+    renderTweets(result);
+  });
+};
+
+loadTweets()
 
 
 });
