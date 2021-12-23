@@ -66,10 +66,26 @@ const renderTweets = function(tweets) {
 
 $("#tweet-submit").submit(function(event) {
   event.preventDefault();
+  alert( "Handler for .submit() called." );
   console.log($(this).serialize());
   const tweetContent =$(this).serialize()
-  alert( "Handler for .submit() called." );
-  $.post("/tweets", tweetContent)
+  const charCounter = Number($('#counter').html());
+  console.log('charCounter is', charCounter);
+  //form validation:
+  if (charCounter < 0) {
+    alert('tweet too long.')
+  }
+  // if (charCounter === 140) {
+  //   alert('no text in body of tweet!')
+  // } 
+  if (tweetContent === "text=") {
+    alert('tweet form empty')
+  }
+  
+  else {
+    alert('tweet test complete, posting.')
+    $.post("/tweets", tweetContent)
+  }
 })
 
 const loadTweets = () => {
