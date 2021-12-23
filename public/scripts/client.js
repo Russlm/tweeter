@@ -19,6 +19,12 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = (tweet) => {
   const tweetElement = `
   <article class= 'tweets'> 
@@ -30,7 +36,7 @@ const createTweetElement = (tweet) => {
           <div>
             <p class= "handle">${tweet.user.handle}</p></div>
         </header>
-        <p class= "tweetBody">${tweet.content.text}</p>
+        <p class= "tweetBody">${escape(tweet.content.text)}</p>
         <footer>
           <div>
             <p>${timeago.format(tweet.created_at.name)}</p></div>
