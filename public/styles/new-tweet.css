@@ -13,3 +13,15 @@
   /* flex-direction: row-reverse; */
   justify-content: space-between;
 }
+.errorTweetlength {
+  border-radius: 5%;
+  color: red;
+  background-color: red;
+  display: none;
+}
+.errorEmptyField {
+  border-radius: 5%;
+  color: red;
+  height: 1.5em;
+  display: none;
+}

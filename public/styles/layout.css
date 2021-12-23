@@ -29,15 +29,20 @@ body {
 * Additional CSS can be defined below or in other CSS files, as per instructions
 */
 
-main {
-  /* padding: 0 5% 0 5% ; */
-  width: 90%;
-  margin-left: 5% ;
-  margin-right: 5% ;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #f4f1ec;
 
+/* Another smartphone breakpoint is maximum width of around 420px */
+@media only screen and (max-width: 420px) {
+  main {
+    /* padding: 0 5% 0 5% ; */
+    width: 90%;
+    margin-left: 5% ;
+    margin-right: 5% ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f4f1ec;
+  
+  }
+  
 }
