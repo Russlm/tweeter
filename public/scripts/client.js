@@ -74,17 +74,15 @@ $("#tweet-submit").submit(function(event) {
   //form validation:
   if (charCounter < 0) {
     alert('tweet too long.')
-  }
-  // if (charCounter === 140) {
-  //   alert('no text in body of tweet!')
-  // } 
-  if (tweetContent === "text=") {
+
+  } else if (tweetContent === "text=") {
     alert('tweet form empty')
-  }
-  
-  else {
+  } else {
     alert('tweet test complete, posting.')
     $.post("/tweets", tweetContent)
+    $('.tweets-container').empty();
+    loadTweets();
+    $('#tweet-submit')[0].reset();
   }
 })
 
@@ -92,7 +90,8 @@ const loadTweets = () => {
   $.getJSON('/tweets')
   .then(result => {
     console.log('tweet request successful')
-    renderTweets(result);
+    renderTweets(result.reverse());
+
   });
 };
 
