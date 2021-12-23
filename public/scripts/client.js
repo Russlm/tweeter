@@ -67,9 +67,9 @@ const renderTweets = function(tweets) {
 $("#tweet-submit").submit(function(event) {
   event.preventDefault();
   console.log($(this).serialize());
-  $(this).serialize()
+  const tweetContent =$(this).serialize()
   alert( "Handler for .submit() called." );
-  $.post("/tweets")
+  $.post("/tweets", tweetContent)
 })
 
 const loadTweets = () => {
