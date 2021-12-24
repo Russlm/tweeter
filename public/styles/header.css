@@ -10,5 +10,8 @@
   justify-content: center;
   background-color: grey;
   background-image: url(http://www.transparenttextures.com/patterns/asfalt-light.png);
+  margin: 2em;
 }
-
+.userPic {
+  margin-top: 1em;
+}

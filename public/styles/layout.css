@@ -14,7 +14,7 @@ html {
  * Global layout stuff
  */
 
- body {
+body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -39,10 +39,12 @@ main {
 
 }
 /* Another smartphone breakpoint is maximum width of around 420px */
-@media only screen and (max-width: 420px) {
-  body {
-    justify-content: center;
+@media only screen and (max-width: 768px) {
+  nav {
+    margin: 0;
   }
-  
-  
+  body {
+    flex-flow: wrap;
+  }
+
 }
