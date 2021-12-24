@@ -15,8 +15,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Views
 
-[Desktop View](https://github.com/Russlm/tweeter/blob/master/docs/Screen%20Shot%202021-12-23%20at%209.44.21%20PM.png?raw=true)
-[Mobile View](https://github.com/Russlm/tweeter/blob/master/docs/Screen%20Shot%202021-12-23%20at%209.44.52%20PM.png?raw=true)
+![Desktop View](https://github.com/Russlm/tweeter/blob/master/docs/Screen%20Shot%202021-12-23%20at%209.44.21%20PM.png?raw=true "Desktop View")
+![Mobile View](https://github.com/Russlm/tweeter/blob/master/docs/Screen%20Shot%202021-12-23%20at%209.44.52%20PM.png?raw=true "Mobile View")
 
 ## Student  
 
