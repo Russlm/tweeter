@@ -5,19 +5,29 @@
 }
 #tweet-text{
   width: 100%;
-  margin-top: 2em;
-  height: 100px;
+    margin-top: 2em;
+    border: none;
+    border-bottom: 0.1em solid black;
+    mix-blend-mode: darken;
+    font-weight: bold;
+    height: 1.5em;
 }
+
 #counterAndButton {
   display: flex;
   font-family: 'Bungee', 'sans-sherif';
   /* flex-direction: row-reverse; */
   justify-content: space-between;
 }
+.submit-button{
+  background-color: #4056A1;
+  color: white;
+}
+
 .errorTweetlength {
   border-radius: 5%;
-  color: red;
-  background-color: red;
+  color: white;
+  background-color: grey;
   display: none;
 }
 .errorEmptyField {

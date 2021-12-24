@@ -25,6 +25,7 @@ body {
   justify-content: flex;
   /* height: 200vh; */
   margin-top: 5em;
+  word-wrap: break-word;
 }
 main {
   /* padding: 0 5% 0 5% ; */
@@ -39,12 +40,9 @@ main {
 
 }
 /* Another smartphone breakpoint is maximum width of around 420px */
-@media only screen and (max-width: 768px) {
-  nav {
-    margin: 0;
-  }
+@media only screen and (max-width: 1000px) {
   body {
     flex-flow: wrap;
   }
-
+  
 }
