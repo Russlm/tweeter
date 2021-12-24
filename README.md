@@ -12,7 +12,20 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+
+## Views
+
+[Desktop View](https://github.com/Russlm/tweeter/blob/master/docs/Screen%20Shot%202021-12-23%20at%209.44.21%20PM.png?raw=true)
+[Mobile View](https://github.com/Russlm/tweeter/blob/master/docs/Screen%20Shot%202021-12-23%20at%209.44.52%20PM.png?raw=true)
+
+## Student  
+
+Russell Mair 
+
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Chance 
+- TimeAgo 
+- md5 
