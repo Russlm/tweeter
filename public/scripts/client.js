@@ -44,13 +44,21 @@ const createTweetElement = (tweet) => {
 const renderTweets = function(tweets) {
   // loops through tweets
   for(tweet of tweets) {
-    $('.tweets-container').append(createTweetElement(tweet)); 
+    // $('.tweets-container').append(createTweetElement(tweet)); 
+    $('.tweets-container').prepend(createTweetElement(tweet)); 
 
   }
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
 }
 
+const renderLatestTweet = function (tweets) {
+  // gets the most recent tweet 
+  // appends the tweets to the tweet object 
+  // creates a constant 
+  const recentTweet = tweets[tweets.length - 1];
+  $('.tweets-container').prepend(createTweetElement(recentTweet));
+};
 
 $("#tweet-submit").submit(function(event) {
   event.preventDefault();
@@ -67,22 +75,37 @@ $("#tweet-submit").submit(function(event) {
     $('.errorEmptyField').slideDown(1000)
   } else {
     $.post("/tweets", tweetContent)
-    $('.tweets-container').empty();
-    loadTweets();
+      .then(() => {
+        $('.tweets-container').empty();
+        loadTweets();
+    });
+    // $.get('/tweets', renderLatestTweet)
+    // $('.tweets-container').prepend(tweetContent);
+    
     $('#tweet-submit')[0].reset();
+    // $.get('/tweets', renderLatestTweet);
   }
 })
 
-const loadTweets = () => {
-  $.getJSON('/tweets')
-  .then(result => {
-    console.log('tweet request successful')
-    renderTweets(result.reverse());
 
-  });
+// singe threaded
+// 
+
+const loadTweets = () => {
+  $.ajax('/tweets', { method: 'GET'})
+    .then(function(tweets) {
+      renderTweets(tweets);
+    })
+    // renderTweets(tweets);
+  // $.getJSON('/tweets')
+  // .then(result => {
+  //   console.log('tweet request successful')
+  //   renderTweets(result.reverse());
+
+  // });
 };
 
-loadTweets()
+loadTweets();
 
 
 });
